@@ -53,7 +53,7 @@
 <g font-family="'Fira Code',Consolas,Menlo,monospace" font-size="26">
 
   <g clip-path="url(#c1)">
-    <text x="70" y="140" fill="#48CAE4">ali@github:~$ <tspan fill="#e8f7ff">whoami</tspan></text>
+    <text x="70" y="140" fill="#48CAE4">ali@github:~$ <tspan fill="#e8f7ff">whoiam</tspan></text>
   </g>
 
   <g clip-path="url(#c2)">
