@@ -10,27 +10,27 @@
 </linearGradient>
 <clipPath id="c1"><rect x="0" y="110" height="40" width="0">
 <animate attributeName="width" dur="12s" repeatCount="indefinite"  
-keyTimes="0;0.04;0.92;1" values="0;520;520;0"/>
+keyTimes="0;0.04;0.92;1" values="0;800;800;0"/>
 </rect></clipPath>
 <clipPath id="c2"><rect x="0" y="156" height="40" width="0">
 <animate attributeName="width" dur="12s" repeatCount="indefinite"  
-keyTimes="0;0.06;0.10;0.92;1" values="0;0;640;640;0"/>
+keyTimes="0;0.06;0.10;0.92;1" values="0;0;1100;1100;0"/>
 </rect></clipPath>
 <clipPath id="c3"><rect x="0" y="212" height="40" width="0">
 <animate attributeName="width" dur="12s" repeatCount="indefinite"  
-keyTimes="0;0.14;0.18;0.92;1" values="0;0;430;430;0"/>
+keyTimes="0;0.14;0.18;0.92;1" values="0;0;700;700;0"/>
 </rect></clipPath>
 <clipPath id="c4"><rect x="0" y="258" height="40" width="0">
 <animate attributeName="width" dur="12s" repeatCount="indefinite"  
-keyTimes="0;0.20;0.27;0.92;1" values="0;0;860;860;0"/>
+keyTimes="0;0.20;0.27;0.92;1" values="0;0;1200;1200;0"/>
 </rect></clipPath>
 <clipPath id="c5"><rect x="0" y="314" height="40" width="0">
 <animate attributeName="width" dur="12s" repeatCount="indefinite"  
-keyTimes="0;0.30;0.34;0.92;1" values="0;0;520;520;0"/>
+keyTimes="0;0.30;0.34;0.92;1" values="0;0;800;800;0"/>
 </rect></clipPath>
 <clipPath id="c6"><rect x="0" y="360" height="40" width="0">
 <animate attributeName="width" dur="12s" repeatCount="indefinite"  
-keyTimes="0;0.36;0.44;0.92;1" values="0;0;900;900;0"/>
+keyTimes="0;0.36;0.44;0.92;1" values="0;0;1300;1300;0"/>
 </rect></clipPath>
 </defs>
 
