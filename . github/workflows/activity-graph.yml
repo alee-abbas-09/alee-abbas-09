@@ -2,6 +2,8 @@ name: Update Activity Graph
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"   # daily auto-update (optional)
 
 permissions:
   contents: write
@@ -12,7 +14,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
+
+      - name: Create dist folder
+        run: mkdir -p dist
 
       - name: Generate activity graph
         uses: maurodesouza/github-readme-activity-graph-action@v1
@@ -24,13 +29,11 @@ jobs:
 
       - name: Check generated file
         run: |
-          echo "=== DIST CONTENTS ==="
           ls -la dist
-          echo "=== ACTIVITY GRAPH ==="
           ls -lh dist/activity-graph.svg
 
       - name: Publish activity graph
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: activity-graph
           build_dir: dist
