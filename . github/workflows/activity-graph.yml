@@ -1,15 +1,13 @@
 name: Update Activity Graph
 
 on:
-  schedule:
-    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +21,11 @@ jobs:
           options: theme=tokyo-night&hide_border=true&area=true
           output_path: dist/activity-graph.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check generated file
+        run: |
+          echo "Files generated:"
+          find dist -maxdepth 2 -type f -print
 
       - name: Publish activity graph
         uses: crazy-max/ghaction-github-pages@v3.1.0
