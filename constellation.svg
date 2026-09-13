@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+<defs>
+  <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#48CAE4"/>
+    <stop offset="100%" stop-color="#0077B6"/>
+  </radialGradient>
+</defs>
+
+<rect width="1200" height="560" fill="none"/>
+
+<!-- faint background rings -->
+<circle cx="600" cy="290" r="150" fill="none" stroke="#243055" stroke-width="1"/>
+<circle cx="600" cy="290" r="235" fill="none" stroke="#1b2440" stroke-width="1"/>
+
+<!-- orbit ring 1 (rotates one way) -->
+<g>
+  <animateTransform attributeName="transform" type="rotate" from="0 600 290" to="360 600 290" dur="34s" repeatCount="indefinite"/>
+
+  <g transform="translate(600,290)">
+    <!-- Python -->
+    <g transform="translate(150,0)">
+      <line x1="-150" y1="0" x2="0" y2="0" stroke="#2e3a63" stroke-width="1.5"/>
+      <circle r="34" fill="#161b2e" stroke="#3776AB" stroke-width="2.5"/>
+      <text text-anchor="middle" dy="6" fill="#e8f7ff" font-family="Arial" font-size="16" font-weight="700">Py</text>
+    </g>
+    <!-- NumPy -->
+    <g transform="translate(-150,0)">
+      <line x1="150" y1="0" x2="0" y2="0" stroke="#2e3a63" stroke-width="1.5"/>
+      <circle r="30" fill="#161b2e" stroke="#4dabcf" stroke-width="2.5"/>
+      <text text-anchor="middle" dy="5" fill="#e8f7ff" font-family="Arial" font-size="13" font-weight="700">NumPy</text>
+    </g>
+    <!-- Pandas -->
+    <g transform="translate(0,150)">
+      <line x1="0" y1="-150" x2="0" y2="0" stroke="#2e3a63" stroke-width="1.5"/>
+      <circle r="30" fill="#161b2e" stroke="#8e6bcf" stroke-width="2.5"/>
+      <text text-anchor="middle" dy="5" fill="#e8f7ff" font-family="Arial" font-size="13" font-weight="700">Pandas</text>
+    </g>
+    <!-- Power BI -->
+    <g transform="translate(0,-150)">
+      <line x1="0" y1="150" x2="0" y2="0" stroke="#2e3a63" stroke-width="1.5"/>
+      <circle r="30" fill="#161b2e" stroke="#F2C811" stroke-width="2.5"/>
+      <text text-anchor="middle" dy="5" fill="#e8f7ff" font-family="Arial" font-size="12" font-weight="700">Power BI</text>
+    </g>
+  </g>
+</g>
+
+<!-- orbit ring 2 (rotates opposite way, bigger radius) -->
+<g>
+  <animateTransform attributeName="transform" type="rotate" from="360 600 290" to="0 600 290" dur="46s" repeatCount="indefinite"/>
+
+  <g transform="translate(600,290)">
+    <!-- Machine Learning -->
+    <g transform="translate(166,166)">
+      <line x1="-166" y1="-166" x2="0" y2="0" stroke="#233156" stroke-width="1.2"/>
+      <circle r="28" fill="#161b2e" stroke="#f97583" stroke-width="2.5"/>
+      <text text-anchor="middle" dy="5" fill="#e8f7ff" font-family="Arial" font-size="11" font-weight="700">ML</text>
+    </g>
+    <!-- Excel -->
+    <g transform="translate(-166,166)">
+      <line x1="166" y1="-166" x2="0" y2="0" stroke="#233156" stroke-width="1.2"/>
+      <circle r="28" fill="#161b2e" stroke="#217346" stroke-width="2.5"/>
+      <text text-anchor="middle" dy="5" fill="#e8f7ff" font-family="Arial" font-size="12" font-weight="700">Excel</text>
+    </g>
+    <!-- Matplotlib -->
+    <g transform="translate(166,-166)">
+      <line x1="-166" y1="166" x2="0" y2="0" stroke="#233156" stroke-width="1.2"/>
+      <circle r="28" fill="#161b2e" stroke="#11557C" stroke-width="2.5"/>
+      <text text-anchor="middle" dy="4" fill="#e8f7ff" font-family="Arial" font-size="9.5" font-weight="700">Matplotlib</text>
+    </g>
+    <!-- Git -->
+    <g transform="translate(-166,-166)">
+      <line x1="166" y1="166" x2="0" y2="0" stroke="#233156" stroke-width="1.2"/>
+      <circle r="28" fill="#161b2e" stroke="#F05032" stroke-width="2.5"/>
+      <text text-anchor="middle" dy="5" fill="#e8f7ff" font-family="Arial" font-size="13" font-weight="700">Git</text>
+    </g>
+  </g>
+</g>
+
+<!-- drifting particles -->
+<circle cx="120" cy="80" r="2.5" fill="#48CAE4" opacity="0.7"><animate attributeName="cy" values="80;100;80" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="1080" cy="470" r="2.5" fill="#48CAE4" opacity="0.7"><animate attributeName="cy" values="470;450;470" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="1000" cy="90" r="2" fill="#90e0ef" opacity="0.6"><animate attributeName="cx" values="1000;1020;1000" dur="7s" repeatCount="indefinite"/></circle>
+
+<!-- core -->
+<circle cx="600" cy="290" r="76" fill="url(#coreGrad)" opacity="0.25"/>
+<circle cx="600" cy="290" r="64" fill="#0d1226" stroke="#48CAE4" stroke-width="2.5"/>
+<text x="600" y="284" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="20" font-weight="800">ALI</text>
+<text x="600" y="306" text-anchor="middle" fill="#90e0ef" font-family="Arial" font-size="14" font-weight="700">ABBAS</text>
+</svg>
