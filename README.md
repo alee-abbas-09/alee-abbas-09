@@ -67,7 +67,7 @@
 
 <div align="center">
 <p align="center">
-  <img src="https://raw.githubusercontent.com/alee-abbas-09/alee-abbas-09/output/activity-graph.svg" alt="GitHub Activity Graph" />
+  [<img src="https://raw.githubusercontent.com/alee-abbas-09/alee-abbas-09/output/activity-graph.svg" alt="GitHub Activity Graph" />]
 </p>
 
 <img src="https://streak-stats.demolab.com?user=alee-abbas-09&theme=tokyonight&hide_border=true" alt="GitHub Contribution Streak"/>
