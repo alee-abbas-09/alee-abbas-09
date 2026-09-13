@@ -66,9 +66,9 @@
 ## 📊 GitHub Activity
 
 <div align="center">
-  
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=alee-abbas-09&theme=tokyo-night&hide_border=true&area=true&custom_title=Ali%20Abbas%20%E2%80%94%20GitHub%20Activity)
-<br/><br/>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/alee-abbas-09/alee-abbas-09/output/activity-graph.svg" alt="GitHub Activity Graph" />
+</p>
 
 <img src="https://streak-stats.demolab.com?user=alee-abbas-09&theme=tokyonight&hide_border=true" alt="GitHub Contribution Streak"/>
 
