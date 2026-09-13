@@ -1,47 +1,234 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="460" viewBox="0 0 1600 460">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1600"
+     height="460"
+     viewBox="0 0 1600 460">
 
-<rect width="1600" height="460" rx="18" fill="#0a0e1f" stroke="#243055"/>
+  <defs>
 
-<rect width="1600" height="56" rx="18" fill="#161c36"/>
+    <!-- Terminal background -->
+    <linearGradient id="terminalBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10162b"/>
+      <stop offset="100%" stop-color="#070b18"/>
+    </linearGradient>
 
-<circle cx="38" cy="28" r="7" fill="#ff5f56"/>
-<circle cx="62" cy="28" r="7" fill="#ffbd2e"/>
-<circle cx="86" cy="28" r="7" fill="#27c93f"/>
+    <!-- Top bar -->
+    <linearGradient id="barBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#171e38"/>
+      <stop offset="100%" stop-color="#0d1328"/>
+    </linearGradient>
 
-<text x="800" y="35"
-      text-anchor="middle"
-      fill="#7d89a8"
-      font-family="monospace"
-      font-size="16">
-ali_abbas@github — zsh — 120x30
-</text>
+    <!-- Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
-<g font-family="monospace" font-size="25">
+    <!-- Keep everything inside terminal -->
+    <clipPath id="bodyClip">
+      <rect x="35" y="65" width="1530" height="370" rx="8"/>
+    </clipPath>
 
-<text x="60" y="120" fill="#48CAE4">
-ali@github:~$ <tspan fill="#ffffff">whoami</tspan>
-</text>
+  </defs>
 
-<text x="60" y="170" fill="#7ee787">
-→ Ali Abbas — Data Science Undergraduate @ QUEST
-</text>
 
-<text x="60" y="220" fill="#48CAE4">
-ali@github:~$ <tspan fill="#ffffff">cat mission.txt</tspan>
-</text>
+  <!-- ========================= -->
+  <!-- TERMINAL WINDOW -->
+  <!-- ========================= -->
 
-<text x="60" y="270" fill="#f2cc60">
-→ Turning raw, messy data into decisions that matter.
-</text>
+  <rect
+    x="0"
+    y="0"
+    width="1600"
+    height="460"
+    rx="18"
+    fill="url(#terminalBg)"
+    stroke="#26345c"
+    stroke-width="2"/>
 
-<text x="60" y="320" fill="#48CAE4">
-ali@github:~$ <tspan fill="#ffffff">./status.sh</tspan>
-</text>
 
-<text x="60" y="370" fill="#7ee787">
-✔ learning   ✔ building   ✔ shipping   → next: deep learning
-</text>
+  <!-- ========================= -->
+  <!-- TITLE BAR -->
+  <!-- ========================= -->
 
-</g>
+  <path
+    d="M18 0
+       H1582
+       Q1600 0 1600 18
+       V56
+       H0
+       V18
+       Q0 0 18 0Z"
+    fill="url(#barBg)"/>
 
-</svg>
+
+  <!-- macOS style buttons -->
+
+  <circle cx="38" cy="28" r="7" fill="#ff5f56"/>
+  <circle cx="62" cy="28" r="7" fill="#ffbd2e"/>
+  <circle cx="86" cy="28" r="7" fill="#27c93f"/>
+
+
+  <!-- Terminal title -->
+
+  <text
+    x="800"
+    y="35"
+    text-anchor="middle"
+    fill="#7783a5"
+    font-family="Consolas, Menlo, monospace"
+    font-size="15">
+
+    ali_abbas@github — zsh — 120x30
+
+  </text>
+
+
+  <line
+    x1="0"
+    y1="56"
+    x2="1600"
+    y2="56"
+    stroke="#26345c"
+    stroke-width="1"/>
+
+
+  <!-- ========================= -->
+  <!-- SCANLINE ANIMATION -->
+  <!-- ========================= -->
+
+  <rect
+    x="0"
+    y="60"
+    width="1600"
+    height="3"
+    fill="#48CAE4"
+    opacity="0.14">
+
+    <animate
+      attributeName="y"
+      values="60;440;60"
+      dur="6s"
+      repeatCount="indefinite"/>
+
+  </rect>
+
+
+  <!-- ========================= -->
+  <!-- TERMINAL CONTENT -->
+  <!-- ========================= -->
+
+  <g
+    clip-path="url(#bodyClip)"
+    font-family="Consolas, Menlo, monospace"
+    font-size="24">
+
+
+    <!-- ========================= -->
+    <!-- LINE 1 -->
+    <!-- ========================= -->
+
+    <g>
+
+      <text
+        x="65"
+        y="125"
+        fill="#48CAE4">
+
+        ali@github:~$
+        <tspan fill="#f2f7ff"> whoami</tspan>
+
+      </text>
+
+      <!-- typing/reveal -->
+
+      <rect
+        x="60"
+        y="96"
+        width="0"
+        height="38"
+        fill="#10162b">
+
+        <animate
+          attributeName="width"
+          values="0;500;500;0"
+          keyTimes="0;0.08;0.86;1"
+          dur="12s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+      <!-- subtle fade -->
+
+      <animate
+        attributeName="opacity"
+        values="0;1;1;1;0"
+        keyTimes="0;0.05;0.15;0.88;1"
+        dur="12s"
+        repeatCount="indefinite"/>
+
+    </g>
+
+
+    <!-- ========================= -->
+    <!-- LINE 2 -->
+    <!-- ========================= -->
+
+    <g>
+
+      <text
+        x="65"
+        y="175"
+        fill="#7ee787">
+
+        → Ali Abbas — Data Science Undergraduate @ QUEST
+
+      </text>
+
+      <animate
+        attributeName="opacity"
+        values="0;0;1;1;0"
+        keyTimes="0;0.10;0.18;0.88;1"
+        dur="12s"
+        repeatCount="indefinite"/>
+
+    </g>
+
+
+    <!-- ========================= -->
+    <!-- LINE 3 -->
+    <!-- ========================= -->
+
+    <g>
+
+      <text
+        x="65"
+        y="225"
+        fill="#48CAE4">
+
+        ali@github:~$
+        <tspan fill="#f2f7ff"> cat mission.txt</tspan>
+
+      </text>
+
+      <animate
+        attributeName="opacity"
+        values="0;0;1;1;0"
+        keyTimes="0;0.18;0.26;0.88;1"
+        dur="12s"
+        repeatCount="indefinite"/>
+
+    </g>
+
+
+    <!-- ========================= -->
+    <!-- LINE 4 -->
+    <!-- ========================= -->
+
+    <g>
+
+      <text
+        x="65"
+        y="275"
