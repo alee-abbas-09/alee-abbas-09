@@ -2,8 +2,6 @@ name: Update Activity Graph
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"   # daily auto-update (optional)
 
 permissions:
   contents: write
@@ -14,28 +12,20 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Create dist folder
-        run: mkdir -p dist
+        uses: actions/checkout@v6
 
       - name: Generate activity graph
         uses: maurodesouza/github-readme-activity-graph-action@v1
         with:
           username: alee-abbas-09
           options: theme=tokyo-night&hide_border=true&area=true
-          output_path: dist/activity-graph.svg
+          output_path: activity-graph.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check generated file
+      - name: Commit activity graph
         run: |
-          ls -la dist
-          ls -lh dist/activity-graph.svg
-
-      - name: Publish activity graph
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: activity-graph
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add activity-graph.svg
+          git diff --cached --quiet || git commit -m "Update activity graph"
+          git push
