@@ -24,8 +24,10 @@ jobs:
 
       - name: Check generated file
         run: |
-          echo "Files generated:"
-          find dist -maxdepth 2 -type f -print
+          echo "=== DIST CONTENTS ==="
+          ls -la dist
+          echo "=== ACTIVITY GRAPH ==="
+          ls -lh dist/activity-graph.svg
 
       - name: Publish activity graph
         uses: crazy-max/ghaction-github-pages@v3.1.0
